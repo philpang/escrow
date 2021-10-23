@@ -14,7 +14,9 @@ pub struct Escrow {
     pub expected_amount: u64,
 }
 
-impl Sealed for Escrow {
+impl Sealed for Escrow{}
+
+impl IsInitialized for Escrow {
     fn is_initialized(&self) -> bool {
         self.is_initialized
     }
